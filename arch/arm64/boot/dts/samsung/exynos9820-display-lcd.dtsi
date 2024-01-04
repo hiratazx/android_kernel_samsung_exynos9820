@@ -172,7 +172,7 @@
 				data_lane = <4>;		/* number of using data lane */
 				cmd_underrun_lp_ref = <3744 5359 4367>;	/* for underrun detect*/
 				mres_en = <1>;
-				mres_number = <3>;
+				mres_number = <2>;
 				mres_width = <1440 1080 720>;
 				mres_height = <2960 2220 1480>;
 				mres_dsc_width = <720 540 360>;
@@ -211,7 +211,7 @@
 				data_lane = <4>;		/* number of using data lane */
 				cmd_underrun_lp_ref = <2877 5278 6994>;	/* for underrun detect*/
 				mres_en = <1>;
-				mres_number = <3>;
+				mres_number = <2>;
 				mres_width = <1440 1080 720>;
 				mres_height = <2960 2220 1480>;
 				mres_dsc_width = <720 540 360>;
@@ -383,7 +383,7 @@
 				data_lane = <4>;		/* number of using data lane */
 				cmd_underrun_lp_ref = <2877 5278 6994>;	/* for underrun detect*/
 				mres_en = <1>;
-				mres_number = <3>;
+				mres_number = <2>;
 				mres_width = <1440 1080 720>;
 				mres_height = <2960 2220 1480>;
 				mres_dsc_width = <720 540 360>;
@@ -464,7 +464,7 @@
 				data_lane = <4>;		/* number of using data lane */
 				cmd_underrun_lp_ref = <2877 5278 6994>;	/* for underrun detect*/
 				mres_en = <1>;
-				mres_number = <3>;
+				mres_number = <2>;
 				mres_width = <1440 1080 720>;
 				mres_height = <3040 2280 1520>;
 				mres_dsc_width = <720 540 360>;
@@ -504,7 +504,7 @@
 				data_lane = <4>;		/* number of using data lane */
 				cmd_underrun_lp_ref = <2877 5278 6994>;	/* for underrun detect*/
 				mres_en = <1>;
-				mres_number = <3>;
+				mres_number = <2>;
 				mres_width = <1440 1080 720>;
 				mres_height = <3040 2280 1520>;
 				mres_dsc_width = <720 540 360>;
@@ -544,7 +544,7 @@
 				data_lane = <4>;		/* number of using data lane */
 				cmd_underrun_lp_ref = <2877 5278 6994>;	/* for underrun detect*/
 				mres_en = <1>;
-				mres_number = <3>;
+				mres_number = <2>;
 				mres_width = <1440 1080 720>;
 				mres_height = <3040 2280 1520>;
 				mres_dsc_width = <720 540 360>;
@@ -584,7 +584,7 @@
 				data_lane = <4>;		/* number of using data lane */
 				cmd_underrun_lp_ref = <2877 5278 6994>;	/* for underrun detect*/
 				mres_en = <1>;
-				mres_number = <3>;
+				mres_number = <2>;
 				mres_width = <1440 1080 720>;
 				mres_height = <3040 2280 1520>;
 				mres_dsc_width = <720 540 360>;
@@ -624,7 +624,7 @@
 				data_lane = <4>;		/* number of using data lane */
 				cmd_underrun_lp_ref = <2989 5390 7106>;	/* for underrun detect*/
 				mres_en = <1>;
-				mres_number = <3>;
+				mres_number = <2>;
 				mres_width = <1440 1080 720>;
 				mres_height = <3040 2280 1520>;
 				mres_dsc_width = <720 540 360>;
@@ -666,7 +666,7 @@
 				data_lane = <4>;		/* number of using data lane */
 				cmd_underrun_lp_ref = <2989 5390 7106>;	/* for underrun detect*/
 				mres_en = <1>;
-				mres_number = <3>;
+				mres_number = <2>;
 				mres_width = <1440 1080 720>;
 				mres_height = <3040 2280 1520>;
 				mres_dsc_width = <720 540 360>;

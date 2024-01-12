@@ -1689,10 +1689,13 @@ static int dwc3_probe(struct platform_device *pdev)
 			__func__, ret);
 	INIT_WORK(&dwc->set_vbus_current_work, dwc3_exynos_set_vbus_current_work);
 
+	dma_set_max_seg_size(dev, UINT_MAX);
+
 	/* Disable LDO */
 	phy_conn(dwc->usb2_generic_phy, 0);
 
 	pr_info("%s: ---\n", __func__);
+
 	return 0;
 
 err5:
@@ -1756,6 +1759,7 @@ static int dwc3_remove(struct platform_device *pdev)
 	dwc3_core_exit(dwc);
 	dwc3_ulpi_exit(dwc);
 
+	pm_runtime_allow(&pdev->dev);
 	pm_runtime_disable(&pdev->dev);
 	pm_runtime_put_noidle(&pdev->dev);
 	pm_runtime_set_suspended(&pdev->dev);

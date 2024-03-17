@@ -394,8 +394,8 @@ static void fsr_print_cx(struct fsr_sidekey_info *info)
 	snprintf(pTmp, 8, "       ");
 	strncat(pStr, pTmp, 8);
 	for (i = 0; i < 6; i++) {
-		snprintf(pTmp, 8, "  CH%02d  ", ChannelName[i]);
-		strncat(pStr, pTmp, 8);
+		snprintf(pTmp, 9, "  CH%02d  ", ChannelName[i]);
+		strncat(pStr, pTmp, 9);
 	}
 	input_raw_info(true, &info->client->dev, "%s: %s\n", __func__, pStr);
 

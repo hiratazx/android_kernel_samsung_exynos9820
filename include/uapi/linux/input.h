@@ -330,7 +330,6 @@ struct input_mask {
 #define KEY_SIDE_GESTURE_LEFT	0x1cb
 #define KEY_SIDE_GESTURE	0x1c6
 #define KEY_BLACK_UI_GESTURE	0x1c7
-#define SW_GLOVE		0x0f	/* set = glove mode */
 #define ABS_MT_PALM		0x3e	/* palm touch */
 #define ABS_MT_GRIP		0x3f	/* grip touch */
 

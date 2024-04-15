@@ -13,7 +13,6 @@
 #include "exynos9820-beyond2lte_mst-pinctrl.dtsi"
 #include "exynos9820-beyond0lte_motor.dtsi"
 #include "exynos9820-beyond0lte_input_common.dtsi"
-#include "exynos9820-inputbooster.dtsi"
 #include "modem-s5000ap-sipc-pdata.dtsi"
 
 / {

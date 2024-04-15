@@ -9,8 +9,6 @@
  * published by the Free Software Foundation.
 */
 
-#include "exynos9820-inputbooster.dtsi"
-
 / {
 	fragment@model {
 		target-path = "/";

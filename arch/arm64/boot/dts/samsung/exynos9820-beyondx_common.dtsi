@@ -9,7 +9,6 @@
  * published by the Free Software Foundation.
 */
 #include "exynos9820-beyondx_input_common.dtsi"
-#include "exynos9820-inputbooster.dtsi"
 #include "modem-s5100-dual-sipc-pdata.dtsi"
 #include "modem-s5000ap-dual-sipc-pdata.dtsi"
 #include "exynos9820-beyond2lte_mst.dtsi"

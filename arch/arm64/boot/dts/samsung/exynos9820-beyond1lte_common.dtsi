@@ -12,7 +12,6 @@
 #include "exynos9820-beyond1lte_camera.dtsi"
 #include "exynos9820-beyond2lte_mst-pinctrl.dtsi"
 #include "exynos9820-beyond1lte_input_common.dtsi"
-#include "exynos9820-inputbooster.dtsi"
 #include "modem-s5000ap-sipc-pdata.dtsi"
 
 / {

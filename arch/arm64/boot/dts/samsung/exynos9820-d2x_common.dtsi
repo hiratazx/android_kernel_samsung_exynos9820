@@ -11,7 +11,6 @@
 #include <dt-bindings/gpio/gpio.h>
 #include <dt-bindings/sound/madera.h>
 #include "exynos9820-d2_input_common.dtsi"
-#include "exynos9820-inputbooster.dtsi"
 #include "modem-s5100-dual-sipc-pdata.dtsi"
 #include "modem-s5000ap-dual-sipc-pdata.dtsi"
 

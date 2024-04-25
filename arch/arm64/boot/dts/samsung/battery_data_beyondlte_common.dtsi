@@ -215,7 +215,7 @@
 
 				battery,pd_charging_charge_power = <15000>;
 				battery,max_charging_current = <2350>;
-				battery,battery_full_capacity = <3300>;
+				battery,battery_full_capacity = <3400>;
 
 				/* cycle, chg_float_voltage, recharge_condition_vcell, full_condition_vcell, full_condition_soc, step charging condition */
 				battery,age_data = <0 4350 4280 4250 93 45

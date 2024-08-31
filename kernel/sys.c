@@ -73,6 +73,10 @@
 #include <asm/io.h>
 #include <asm/unistd.h>
 
+#ifdef CONFIG_KSU_SUSFS
+#include <linux/susfs.h>
+#endif
+
 #ifdef CONFIG_SECURITY_DEFEX
 #include <linux/defex.h>
 #endif
@@ -1400,6 +1404,9 @@ SYSCALL_DEFINE1(newuname, struct new_utsname __user *, name)
 			 current->comm, current->pid, tmp.release);
 	}
 	up_read(&uts_sem);
+#ifdef CONFIG_KSU_SUSFS_SPOOF_UNAME
+	susfs_spoof_uname(&tmp);
+#endif
 	if (copy_to_user(name, &tmp, sizeof(tmp)))
 		return -EFAULT;
 

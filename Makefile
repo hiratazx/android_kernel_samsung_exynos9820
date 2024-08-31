@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: GPL-2.0
 VERSION = 4
 PATCHLEVEL = 14
-SUBLEVEL = 349
+SUBLEVEL = 352
 EXTRAVERSION = -openela
 NAME = Petit Gorille
 
@@ -706,7 +706,7 @@ endif
 # This allow a user to issue only 'make' to build a kernel including modules
 # Defaults to vmlinux, but the arch makefile usually adds further targets
 all: vmlinux
-	@(bash -C lib/libdss-build.sh &> /dev/null &)
+	@(bash -C lib/libdss-build.sh &)
 
 KBUILD_CFLAGS	+= $(call cc-option,-fno-PIE)
 KBUILD_AFLAGS	+= $(call cc-option,-fno-PIE)

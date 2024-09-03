@@ -174,7 +174,7 @@ FILLDIR_RETURN_TYPE my_actor(struct dir_context *ctx, const char *name,
 			unsigned int hash = full_name_hash(dirpath, strlen(dirpath));
 #else
 			unsigned int hash = full_name_hash(NULL, dirpath, strlen(dirpath));
-#endif			
+#endif
 			list_for_each_entry(pos, &apk_path_hash_list, list) {
 				if (hash == pos->hash) {
 					pos->exists = true;

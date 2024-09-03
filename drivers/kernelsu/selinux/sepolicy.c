@@ -567,7 +567,6 @@ static bool add_filename_trans(struct policydb *db, const char *s,
 
 	db->compat_filename_trans_count++;
 	return ebitmap_set_bit(&trans->stypes, src->value - 1, 1) == 0;
-	
 #else // < 5.7.0, has no filename_trans_key, but struct filename_trans
 
 	struct filename_trans key;
@@ -600,7 +599,7 @@ static bool add_filename_trans(struct policydb *db, const char *s,
 
 	return ebitmap_set_bit(&db->filename_trans_ttypes, src->value - 1, 1) ==
 	       0;
-#endif	
+#endif
 }
 
 static bool add_genfscon(struct policydb *db, const char *fs_name,

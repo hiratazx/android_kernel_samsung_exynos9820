@@ -47,7 +47,6 @@
 #define __PT_RC_REG ax
 #define __PT_SP_REG sp
 #define __PT_IP_REG ip
-
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 16, 0)
 #define PRCTL_SYMBOL "__x64_sys_prctl"
 #define SYS_READ_SYMBOL "__x64_sys_read"

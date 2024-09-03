@@ -182,24 +182,10 @@ int ksu_handle_devpts(struct inode *inode)
 
 	if (!ksu_is_allow_uid(uid))
 		return 0;
-		
+
 	if (ksu_devpts_sid) {
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(5, 1, 0)
 		struct inode_security_struct *sec = selinux_inode(inode);
-#elif LINUX_VERSION_CODE <= KERNEL_VERSION(4, 5, 0)
-/*
- * Before 4.6-rc6, devpts_get_priv use pts_inode as struct,
- * instead of dentry.
- *
- * Patch for hooks changed from this:
- * + ksu_handle_devpts(dentry->d_inode);
- * to:
- * + ksu_handle_devpts(pts_inode->i_security);
- *
- * WARNING: Untested.
- */
-		struct inode_security_struct *sec =
-			(struct inode_security_struct *)inode;
 #else
 		struct inode_security_struct *sec =
 			(struct inode_security_struct *)inode->i_security;
@@ -257,7 +243,8 @@ static int sys_newfstatat_handler_pre(struct kprobe *p, struct pt_regs *regs)
 {
 	struct pt_regs *real_regs = PT_REAL_REGS(regs);
 	int *dfd = (int *)&PT_REGS_PARM1(real_regs);
-	const char __user **filename_user = (const char **)&PT_REGS_PARM2(real_regs);
+	const char __user **filename_user =
+		(const char **)&PT_REGS_PARM2(real_regs);
 	int *flags = (int *)&PT_REGS_SYSCALL_PARM4(real_regs);
 
 	return ksu_handle_stat(dfd, filename_user, flags);

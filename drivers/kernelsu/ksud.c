@@ -575,7 +575,6 @@ static struct kprobe vfs_read_kp = {
 };
 #endif
 
-
 static struct kprobe input_event_kp = {
 	.symbol_name = "input_event",
 	.pre_handler = input_handle_event_handler_pre,

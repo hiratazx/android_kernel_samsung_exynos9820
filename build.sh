@@ -55,7 +55,7 @@ O=out
 "
 
 # Define specific variables
-KERNEL_DEFCONFIG=extreme_"$MODEL"_defconfig
+KERNEL_DEFCONFIG=exynos9820"$MODEL"_defconfig
 case $MODEL in
 beyond0lte)
     BOARD=SRPRI28A016KU
@@ -127,6 +127,8 @@ d2xks)
     exit
 esac
 
+LZ4KD=lz4kd.config
+
 if [ -z $KSU_OPTION ]; then
     read -p "Include KernelSU (y/N): " KSU_OPTION
 fi
@@ -183,7 +185,7 @@ echo "-----------------------------------------------"
 echo "Building kernel using "$KERNEL_DEFCONFIG""
 echo "Generating configuration file..."
 echo "-----------------------------------------------"
-make ${MAKE_ARGS} -j$CORES $KERNEL_DEFCONFIG extreme.config $KSU $N10 || abort
+make ${MAKE_ARGS} -j$CORES $KERNEL_DEFCONFIG main.config $LZ4KD $KSU $N10 || abort
 
 echo "Building kernel..."
 echo "-----------------------------------------------"

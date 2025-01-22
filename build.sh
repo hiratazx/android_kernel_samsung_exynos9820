@@ -177,15 +177,11 @@ if [ "$TZDEV" == "old" ] && [ -e "drivers/misc/tzdev/umem.c" ]; then
     cp -a build/tzdev/old/* drivers/misc/tzdev
 fi
 
-if [[ "$SOC" == "exynos9825" ]]; then
-    N10=9825.config
-fi
-
 echo "-----------------------------------------------"
 echo "Building kernel using "$KERNEL_DEFCONFIG""
 echo "Generating configuration file..."
 echo "-----------------------------------------------"
-make ${MAKE_ARGS} -j$CORES $KERNEL_DEFCONFIG main.config $LZ4KD $KSU $N10 || abort
+make ${MAKE_ARGS} -j$CORES $KERNEL_DEFCONFIG main.config $LZ4KD $KSU || abort
 
 echo "Building kernel..."
 echo "-----------------------------------------------"
@@ -258,11 +254,6 @@ cp build/out/$MODEL/dtbo.img build/out/$MODEL/zip/files/dtbo.img
 cp build/update-binary build/out/$MODEL/zip/META-INF/com/google/android/update-binary
 cp build/updater-script build/out/$MODEL/zip/META-INF/com/google/android/updater-script
 
-if [ "$SOC" == "exynos9825" ]; then
-    version=$(grep -o 'CONFIG_LOCALVERSION="[^"]*"' arch/arm64/configs/9825.config | cut -d '"' -f 2)
-else
-    version=$(grep -o 'CONFIG_LOCALVERSION="[^"]*"' arch/arm64/configs/extreme.config | cut -d '"' -f 2)
-fi
 version=${version:1}
 pushd build/out/$MODEL/zip > /dev/null
 DATE=`date +"%d-%m-%Y_%H-%M-%S"`    
